@@ -4,6 +4,9 @@ namespace Strategio\Model;
 
 class HomepageDataset
 {
+    /**
+     * @return array<int, mixed>
+     */
     public function getReviews(): array
     {
         return [
@@ -46,6 +49,9 @@ class HomepageDataset
         ];
     }
     
+    /**
+     * @return array<int, mixed>
+     */
     public function getClients(): array
     {
         return [
@@ -58,6 +64,9 @@ class HomepageDataset
         ];
     }
     
+    /**
+     * @return array<int, mixed>
+     */
     public function getMembers(): array
     {
         return [
@@ -84,6 +93,9 @@ class HomepageDataset
         ];
     }
     
+    /**
+     * @return array<int, mixed>
+     */
     public function getAbilities(): array
     {
         return [

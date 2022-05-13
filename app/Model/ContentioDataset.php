@@ -6,6 +6,9 @@ use Strategio\Model\Enum\Feature;
 
 class ContentioDataset
 {
+    /**
+     * @return array<int, string>
+     */
     public function getCorePointList(): array
     {
         return [
@@ -21,6 +24,10 @@ class ContentioDataset
         ];
     }
     
+    /**
+     * @param string $module
+     * @return array<string, mixed>
+     */
     public function getFeaturesCompletion(string $module): array
     {
         $features = $this->getModules()[$module]['features'];
@@ -32,6 +39,9 @@ class ContentioDataset
         ];
     }
     
+    /**
+     * @return array<string, int>
+     */
     public function getModulesCompletion(): array
     {
         $todo = $inProgress = $done = 0;
@@ -50,6 +60,9 @@ class ContentioDataset
         ];
     }
     
+    /**
+     * @return array<string, string>
+     */
     public function getTechnologies(): array
     {
         return [
@@ -61,6 +74,9 @@ class ContentioDataset
         ];
     }
     
+    /**
+     * @return array<string, mixed>
+     */
     public function getPackages(): array
     {
         return [
@@ -135,6 +151,9 @@ class ContentioDataset
         ];
     }
     
+    /**
+     * @return array<string, mixed>
+     */
     public function getModules() : array
     {
         return [
@@ -395,6 +414,9 @@ class ContentioDataset
         ];
     }
     
+    /**
+     * @return array<string, mixed>
+     */
     public function getPointList(): array
     {
         return [
