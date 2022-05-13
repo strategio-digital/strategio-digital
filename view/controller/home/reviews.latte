@@ -1,0 +1,79 @@
+{*
+ * Copyright (c) 2021 Strategio Digital s.r.o.
+ * @author Jiří Zapletal (https://strategio.digital, jz@strategio.digital)
+ *}
+
+{varType ContentioSdk\Component\AssetLoader $assets}
+{varType array $reviews}
+{varType array $clients}
+
+<div class="bg-blue-dark py-3">&nbsp;</div>
+<div class="container text-center py-5 py-xl-7 py-xxl-10" id="reference">
+    <div class="text-white mb-5">
+        <h2 class="display-3 fw-bold">Bude to skvělý&nbsp;vývoj</h2>
+        <p class="h3">Jak se s námi spolupracuje a co o nás říkají samotní&nbsp;klienti?</p>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="text-white testimonial-prev" id="testimonial-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
+                <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+            </svg>
+        </div>
+        <div class="testimonial-container">
+            <div id="testimonials" class="shadow-lg">
+                {foreach $reviews as $review}
+                    <div class="bg-white testimonial">
+                        <div class="row">
+                            <div class="col-lg-6 col-xl-5 pe-lg-0 position-relative text-center d-none d-lg-block">
+                                <img src="{$assets->get($review['photo'])}" alt="{$review['author']}"
+                                     class="img-fluid testimonial-img">
+                            </div>
+                            <div class="col-lg-6 col-xl-7 ps-lg-0 d-flex align-items-center">
+                                <div class="p-4 p-xl-5">
+                                    <div class="d-flex d-lg-block justify-content-center align-items-center mt-4 mt-lg-0">
+                                        <div class="d-lg-none me-4">
+                                            <img src="{$assets->get($review['photo'])}" alt="{$review['author']}" class="img-fluid testimonial-img">
+                                        </div>
+                                        <div class="h4 mb-0 text-start text-lg-center testimonial-author">
+                                            <div class="mb-1">{$review['author']}</div>
+                                            <div class="fw-bold">{$review['position']} {$review['company']|noescape}</div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <blockquote class="blockquote mb-0">
+                                            <em>{$review['description']|noescape}</em>
+                                        </blockquote>
+                                        <div class="mt-1">
+                                            <img src="{$assets->get($review['logo'])}" alt="{$review['company']}" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {/foreach}
+            </div>
+        </div>
+        <div class="text-white testimonial-next" id="testimonial-next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
+                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="mt-5 text-center testimonial-nav-items" id="testimonial-nav-items">
+        {foreach $reviews as $review}
+            <span class="d-inline-block rounded-circle mx-1">&nbsp;</span>
+        {/foreach}
+    </div>
+
+    <div class="text-white mt-7">
+        <h2 class="fw-bold mb-5 display-6">Důvěřují nám nejrůznější firmy&nbsp;a&nbsp;instituce</h2>
+        <div class="row opacity-50 justify-content-center">
+            <div class="col-6 col-sm-4 col-lg-3 col-xl-2 px-3 text-center" n:foreach="$clients as $client">
+                <img src="{$assets->get($client['img'])}" alt="{$client['name']}">
+            </div>
+        </div>
+    </div>
+</div>

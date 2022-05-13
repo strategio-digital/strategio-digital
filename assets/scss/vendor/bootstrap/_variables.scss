@@ -1,0 +1,23 @@
+$enable-rounded: true;
+$enable-shadows: true;
+$enable-gradients: false;
+$enable-reduced-motion: false;
+$enable-deprecation-messages: false;
+
+$font-family-sans-serif: "Montserrat", sans-serif;
+$warning: $orange;
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+  7: $spacer * 4.5,
+  8: $spacer * 6,
+  9: $spacer * 8,
+  10: $spacer * 10
+)

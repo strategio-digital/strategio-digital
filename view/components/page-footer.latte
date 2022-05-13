@@ -1,0 +1,121 @@
+{*
+ * Copyright (c) 2021 Strategio Digital s.r.o.
+ * @author Jiří Zapletal (https://strategio.digital, jz@strategio.digital)
+ *}
+
+{varType ContentioSdk\Component\AssetLoader $assets}
+{varType array $contacts}
+
+<div class="py-3 bg-blue-dark">&nbsp;</div>
+<div class="py-5 py-xl-7 bg-blue">
+    <div class="container">
+        <div class="text-white text-lg-center">
+            <div class="h5 mb-4">
+                Užitečné tipy do inboxu <span class="small">(čtvrtletně)</span>
+            </div>
+            <div class="row d-flex justify-content-lg-center">
+                <div class="col-md-8 col-lg-7 col-xl-6 col-xxl-5">
+                    <form id="subscribeForm" class="newsletter" data-v-group>
+                        <div data-v-alerts></div>
+                        <div class="input-group mb-0">
+                            <input type="text" name="email" class="form-control" placeholder="Zadejte e-mail" aria-label="Zadejte e-mail" aria-describedby="newsletter-btn" required>
+                            <div class="input-group-append">
+                                <button class="btn btn-xl btn-blue" type="submit">Odebírat <span class="d-none d-sm-inline">tipy</span></button>
+                            </div>
+                        </div>
+                        <div class="input-group fw-bold text-white ms-2 mt-1" data-v-message></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row text-white footer">
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-5 mt-lg-7 order-lg-1">
+                <div class="h4 mb-0 fw-bold">Kontakty</div>
+                <address class="mt-4">
+                    <div class="mb-2">Strategio Digital s.r.o.</div>
+                    <div class="mb-2">Radniční 133/1 Č. Budějovice</div>
+                    <div class="mb-2">370&nbsp;01 Czech Republic</div>
+                    <div class="mb-2">IČO: 09568042</div>
+                    {*<div class="mb-0">DIČ: neplátce DPH</div>*}
+                </address>
+                <div class="mt-4 mt-lg-5">
+                    <div class="h5 fw-bolder mb-2 d-flex align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="me-3" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                        </svg>
+                        <a href="mailto:{$contacts[0]['email']}" target="_blank">{$contacts[0]['email']}</a>
+                    </div>
+                    <div class="h5 fw-bolder mb-2 d-flex align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="me-3" viewBox="0 0 16 16">
+                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                        </svg>
+                        <a href="tel:{$contacts[0]['phone']|replace:' '}" target="_blank">{$contacts[0]['phone']}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-5 mt-lg-7 order-lg-2">
+                <div class="h4 mb-0 fw-bold">Dokumenty</div>
+                <div class="mt-4">
+                    {*<div class="mb-2">
+                        <a href="#" data-scroll="#onboarding-manual">Jak se připravit na digitální projekt</a>
+                    </div>*}
+                    <div class="mb-2">
+                        <a href="//zvladnucovid.cz" target="_blank">Vyvíjej s námi zvladnucovid.cz</a>
+                    </div>
+                    <div class="mb-2 text-decoration">
+                        <a href="//contentio.store">Kup mikinu a podpoř open-source</a>
+                    </div>
+                    <div class="mb-2">
+                        <a href="/article/obchodni-podminky">Obchodní podmínky</a>
+                    </div>
+                    <div class="mb-2">
+                        <a href="/article/gdpr-cookies">Cookies & GDPR</a>
+                    </div>
+                </div>
+                <div class="mt-4 mt-lg-5">
+                    <img src="{$assets->get('/img/page-gdpr.svg')}" alt="Splňuje pravidla GDPR" style="width: 150px">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-5 mt-lg-7 order-lg-3">
+                <div class="h4 mb-0 fw-bold">Řešení pro Vás</div>
+                <div class="mt-4">
+                    <div class="mb-2">
+                        <a href="/contentio">Contentio (e-shop)</a>
+                    </div>
+                    <div class="mb-2">
+                        <a href="//contactio.app" target="_blank">Contactio (mailing)</a>
+                    </div>
+                    {*<div class="mb-2">
+                        <a href="//pricingo.app" target="_blank">Pricingo (data extractor)</a>
+                    </div>*}
+                    <div class="mb-2">
+                        <a href="//keywordio.app" target="_blank">Keywordio (Sklik kw stats)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-12 col-xl-3 mt-5 mt-lg-7 order-lg-0 order-xl-4 position-relative">
+                <div class="h4 mb-0 fw-bold ">Proč Strategio?</div>
+                <div class="paragraph mt-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="me-2 fw-bold" viewBox="0 0 16 16">
+                        <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
+                    </svg>
+                    Jednáme na rovinu. Víme, s čím umíme pomoci a s čím naopak ne. Každý z nás je ve svém
+                    zaměření dlouholetý profesionál. Svému oboru rozumíme, a proto dokážeme vyvíjet kvalitní digitální produkty.
+                </div>
+                <div class="footer-logo text-end mt-4 d-none d-xl-block text-center text-md-end">
+                    <img src="{$assets->get('/img/page-powered-by.svg')}" alt="Strategio Digital s.r.o." style="width: 200px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-blue">
+    <div class="container py-4">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-12">
+                Copyright &copy; {date('Y')} Strategio&nbsp;Digital&nbsp;s.r.o.
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,90 @@
+/**
+ * Copyright (c) 2020 Wakers.cz
+ * @author Jiří Zapletal (https://www.wakers.cz, zapletal@wakers.cz)
+ */
+
+
+.navigation {
+    transition: 300ms ease all;
+    background-color: transparentize($blue-dark, 1);
+    padding: 2rem 0;
+
+    @include media-breakpoint-down(lg) {
+        padding: .3rem 0;
+        background-color: darken($blue-dark, 5%);
+    }
+
+    .navbar-brand {
+        font-weight: bolder;
+        color: $white;
+        line-height: 1;
+        text-decoration: none;
+        display: flex;
+
+        img {
+            height: 2.5rem
+        }
+
+        .title {
+            margin-left: 1rem;
+            text-transform: uppercase;
+            font-size: 2.3rem;
+            transition: 300ms ease font-size;
+
+            @include media-breakpoint-down(xl) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .sub-title {
+            color: $orange;
+            text-align: right;
+            font-size: 1rem;
+        }
+    }
+
+    &.navigation-small {
+        padding: .3rem 0;
+        background-color: darken($blue-dark, 5%);
+        border-bottom: 1px solid transparentize($white, .9);
+
+        .navbar-brand {
+            .title {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .navbar {
+        .nav-link {
+            color: $white;
+            font-weight: 700;
+            border: none;
+            background: transparent;
+        }
+    }
+
+    .navbar-toggler {
+        color: $white;
+        border: none;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        outline: none;
+
+        @include media-breakpoint-down(lg) {
+            display: grid;
+        }
+
+        &:focus,
+        &:hover {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-text {
+            margin-top: 2px;
+            font-size: 11px;
+        }
+    }
+}

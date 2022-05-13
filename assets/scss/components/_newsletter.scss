@@ -1,0 +1,48 @@
+/**
+ * Copyright (c) 2020 Wakers.cz
+ * @author Jiří Zapletal (https://www.wakers.cz, zapletal@wakers.cz)
+ */
+
+
+.newsletter {
+    .input-group {
+        .form-control {
+            background-color: darken($blue-dark, 10%);
+            //padding: 2.1rem;
+            color: $white;
+            //font-size: 1.2rem;
+            font-weight: bold;
+            border: 1px solid darken($blue-dark, 10%);
+            border-radius: .7rem 0 0 .7rem;
+
+            &::placeholder {
+                color: $blue;
+            }
+
+            &:active,
+            &:focus,
+            &:not(:placeholder-shown){
+                box-shadow: none;
+                border-color: $blue;
+            }
+        }
+
+        .btn-blue {
+            border-radius: 0 .7rem .7rem 0;
+            transform: none;
+            box-shadow: none;
+            background-color: darken($blue, 5%);
+            border-color: darken($blue, 5%);
+            font-weight: 700;
+            color: darken($blue-dark, 10%);
+            padding: 1rem;
+            @include transition(300ms ease all);
+
+            &:hover,
+            &:active {
+                background-color: $white;
+                border-color: $white;
+            }
+        }
+    }
+}

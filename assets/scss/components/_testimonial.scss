@@ -1,0 +1,75 @@
+/**
+ * Copyright (c) 2021 Strategio Digital s.r.o.
+ * @author Jiří Zapletal (https://strategio.digital, jz@strategio.digital)
+ */
+
+.testimonial-next,
+.testimonial-prev {
+    box-shadow: none;
+    cursor: pointer;
+    @include transition(ease opacity 300ms);
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+
+    &:hover,
+    &:focus {
+        opacity: .5;
+    }
+}
+
+.testimonial-nav-items {
+    span {
+        width: 20px;
+        height: 20px;
+        background-color: $light;
+        outline: none;
+        cursor: pointer;
+        @include transition(ease opacity 300ms);
+
+        &:hover,
+        &:focus {
+            opacity: .5;
+        }
+
+        &.tns-nav-active {
+            background-color: $warning;
+        }
+    }
+}
+
+.testimonial-container {
+    width: 90%;
+    @include media-breakpoint-down(lg) {
+        width: 80%;
+    }
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+
+
+    .testimonial {
+
+        .testimonial-author {
+            font-size: 1.125rem;
+            @include media-breakpoint-down(xxl) {
+                font-size: 1rem;
+            }
+        }
+
+        .blockquote {
+            font-size: 1.10rem;
+            color: lighten($dark, 20);
+            @include media-breakpoint-down(xxl) {
+                font-size: 1rem;
+            }
+        }
+
+        .testimonial-img {
+            @include media-breakpoint-down(lg) {
+                border-radius: 50%;
+                width: 80px;
+            }
+        }
+    }
+}

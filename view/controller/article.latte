@@ -1,0 +1,36 @@
+{*
+ * Copyright (c) 2021 Strategio Digital s.r.o.
+ * @author Jiří Zapletal (https://strategio.digital, jz@strategio.digital)
+ *}
+
+{varType array $article}
+
+{extends './../@layout.latte'}
+
+{block head}
+    <title>{$article['title']}</title>
+    <meta name="description" content="{$article['description']|truncate:150}">
+    {include parent}
+{/block}
+
+{block modal}
+    {include './../components/contact-modal.latte'}
+{/block}
+
+{block content}
+    <header class="pt-9 mt-lg-7">
+        <div class="container text-white">
+            <h1 class="display-4 fw-bold mb-0">{$article['title']}</h1>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="bg-light p-4 p-sm-5 rounded-3">
+                {$article['description']|noescape}
+            </div>
+        </div>
+    </section>
+
+    {include './../components/page-footer.latte'}
+{/block}

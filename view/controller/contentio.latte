@@ -1,0 +1,32 @@
+{*
+ * Copyright (c) 2021 Strategio Digital s.r.o.
+ * @author Jiří Zapletal (https://strategio.digital, jz@strategio.digital)
+ *}
+
+{extends './../@layout.latte'}
+
+{block head}
+    <title>E-shopové řešení na míru | Contentio</title>
+    <meta name="description"
+          content="Neomezené množství e-shopů, webů, přistávacích stránek a aplikací řízených z jednoho místa.">
+    {include parent}
+{/block}
+
+{block modal}
+    {include './../components/contact-modal.latte'}
+{/block}
+
+{block content}
+    <header class="pt-9 mt-lg-7">
+        <div class="container text-white text-sm-center">
+            <h1 class="text-white fw-bold display-5 mb-0">Rozvíjejte Váš projekt pomocí technologie</h1>
+        </div>
+    </header>
+
+    {include './contentio/why-contentio.latte'}
+    {include './contentio/technologies.latte'}
+    {include './contentio/pricing.latte'}
+    {include './contentio/modules.latte'}
+
+    {include './../components/page-footer.latte'}
+{/block}

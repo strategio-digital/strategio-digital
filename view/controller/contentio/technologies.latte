@@ -1,0 +1,20 @@
+{*
+ * Copyright (c) 2021 Strategio Digital s.r.o.
+ * @author Jiří Zapletal (https://strategio.digital, jz@strategio.digital)
+ *}
+
+{varType ContentioSdk\Component\AssetLoader $assets}
+{varType array $technologies}
+
+<div class="bg-blue pt-5 pt-lg-8">
+    <div class="container">
+        <h2 class="text-white fw-bold display-5 mb-3 text-sm-center">Využijte sílu moderních nástrojů</h2>
+        <div class="row justify-content-sm-center align-items-center">
+            <div class="col-6 col-md-4 col-xl-2 mt-4" n:foreach="$technologies as $name => $file">
+                <div class="bg-white shadow-sm text-blue rounded-3 p-4 p-sm-5 text-center">
+                    <img src="{$assets->get($file)}" alt="{$name}" class="img-fluid" data-bs-toggle="tooltip" data-bs-title="{$name}" data-bs-placement="top">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

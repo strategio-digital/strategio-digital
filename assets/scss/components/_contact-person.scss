@@ -1,0 +1,20 @@
+/**
+ * Copyright (c) 2019 Wakers.cz
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ */
+
+.contact-person {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+
+  img {
+    border: 1px solid $gray-300;
+  }
+
+  a {
+    display: block;
+    color: $gray-800;
+    margin: .1rem;
+  }
+}

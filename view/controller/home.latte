@@ -1,0 +1,29 @@
+{*
+ * Copyright (c) 2021 Strategio Digital s.r.o.
+ * @author Jiří Zapletal (https://strategio.digital, jz@strategio.digital)
+ *}
+
+{extends './../@layout.latte'}
+
+{block head}
+    {include parent}
+    <meta name="description" content="Přetavte své plány v reálné technologické řešení.">
+    <title>Moderní vývoj webů, aplikací a e-commerce řešení</title>
+{/block}
+
+{block modal}
+    {include './../components/contact-modal.latte'}
+{/block}
+
+{block content}
+    {include './../components/page-header.latte'}
+
+    {include './home/solutions-ready-boxes.latte'}
+    {include './home/solutions-custom.latte'}
+    {include './home/reviews.latte'}
+    {include './home/team.latte'}
+    {include './home/hire.latte'}
+    {*include './component/ebook.latte'*}
+
+    {include './../components/page-footer.latte'}
+{/block}

@@ -1,0 +1,51 @@
+{*
+ * Copyright (c) 2021 Strategio Digital s.r.o.
+ * @author Jiří Zapletal (https://strategio.digital, jz@strategio.digital)
+ *}
+
+{varType ContentioSdk\Component\AssetLoader $assets}
+{varType array $pricing}
+{varType array $members}
+{varType array $abilities}
+
+<div class="bg-blue-dark py-3">&nbsp;</div>
+<div class="position-relative bg-blue text-white pt-5 pt-xl-7 pt-xxl-10" id="tym">
+    <div class="container position-relative">
+        <div class="text-center mb-6">
+            <h2 class="display-3 fw-bold">Váš nový tým</h2>
+            <p class="h3 mb-0">
+                Dle potřeb si zvolíte jednotlivé vývojáře a sestavíte tým.
+            </p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-7 mb-4 opacity-50">
+                <div class="text-center">
+                    {foreach $abilities as $ability}
+                        <span class="badge {$ability['bg']}">{$ability['name']}</span>
+                    {/foreach}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container position-relative" style="z-index: 1">
+        <div class="row justify-content-center align-items-end" style="margin-bottom: -3%">
+            <div class="col-6 col-sm-3 text-center mt-5" n:foreach="$members as $member">
+                <div class="mb-4">
+                    <div class="fw-bold">{$member['name']}</div>
+                    <div class="small">{$member['position']}</div>
+                </div>
+                <img src="{$assets->get($member['photo'])}" alt="{$member['name']}" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pt-5 bg-light text-blue position-relative">
+    <div class="container text-center">
+        <div class="h5 mb-0 mt-lg-3">
+            Hodinová sazba jednoho vývojáře:&nbsp;<strong class="fw-bold text-warning">{$pricing['value']|number: 0, ',', '.'}&nbsp;{$pricing['currency']}</strong>
+        </div>
+    </div>
+</div>
