@@ -7,33 +7,43 @@ declare(strict_types=1);
 
 namespace Strategio\Controller\Base;
 
+use ContentioSdk\Component\AssetLoader;
+use ContentioSdk\Component\StdTemplate;
+use ContentioSdk\Component\Thumbnail\ThumbGen;
+use ContentioSdk\Debugger\ApiDebugger;
+use Latte\Engine;
+use Strategio\Model\ContactDataset;
+use Strategio\Model\ContentioDataset;
+use Strategio\Model\PricingDataset;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Generator\UrlGenerator;
+
 abstract class BaseController extends \ContentioSdk\Controller\Base\BaseController
 {
+    public function __construct(
+        protected Engine           $latte,
+        protected ApiDebugger      $apiDebugger,
+        protected Response         $response,
+        protected AssetLoader      $assetLoader,
+        protected ThumbGen         $thumbGen,
+        protected UrlGenerator     $urlGenerator,
+        protected StdTemplate      $template,
+        public Request             $request,
+        
+        protected ContactDataset   $contactDataset,
+        protected PricingDataset   $pricingDataset,
+        protected ContentioDataset $contentioDataset,
+    )
+    {
+    }
+    
     public function startup(): void
     {
         parent::startup();
         
-        $this->template->contacts = $this->getContacts();
-        $this->template->pricing = $this->getPricing();
-    }
-    
-    protected function getContacts(): array
-    {
-        return [
-            [
-                'email' => 'get@strategio.digital',
-                'phone' => '+420 606 091 125'
-            ]
-        ];
-    }
-    
-    protected function getPricing(): array
-    {
-        return [
-            'currency' => 'CZK',
-            'value' => 1200,
-            'discountValue' => 900,
-            'discountPercentage' => 25,
-        ];
+        $this->template->contacts = $this->contactDataset;
+        $this->template->pricing = $this->pricingDataset;
+        $this->template->contentio = $this->contentioDataset;
     }
 }

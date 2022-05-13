@@ -3,7 +3,7 @@
  * @author Jiří Zapletal (https://strategio.digital, jz@strategio.digital)
  *}
 
-{varType array $pointList}
+{varType Strategio\Model\ContentioDataset $contentio}
 
 <div class="container mt-5">
     <div class="bg-light shadow-lg text-blue rounded p-4 p-sm-5">
@@ -11,7 +11,7 @@
             <div class="col-xl-7">
                 <h2 class="fw-bold">Proč Contentio?</h2>
                 <ul class="list-unstyled mt-4 mb-0">
-                    {var $pointList = array_merge($pointList['core'], $pointList['more'])}
+                    {var $pointList = array_merge($contentio->getPointList()['core'], $contentio->getPointList()['more'])}
                     {foreach $pointList as $point}
                         <li class="{if $iterator->getCounter() % 8 === 0}mb-4{elseif !$iterator->isLast()}mb-2{/if} d-flex">
                             <div>

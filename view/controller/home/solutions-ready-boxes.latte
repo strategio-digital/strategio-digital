@@ -4,7 +4,7 @@
  *}
 
 {varType ContentioSdk\Component\AssetLoader $assets}
-{varType array $pointList}
+{varType Strategio\Model\ContentioDataset $contentio}
 
 <div class="position-relative text-white pt-5 pt-xl-7 pt-xxl-10" id="pripravena-reseni">
     <div class="container">
@@ -23,7 +23,7 @@
                     </p>
 
                     <ul class="list-unstyled mt-4">
-                        {foreach $pointList as $point}
+                        {foreach $contentio->getCorePointList() as $point}
                             <li class="mb-2 d-flex">
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="me-2 text-success" viewBox="0 0 16 16">

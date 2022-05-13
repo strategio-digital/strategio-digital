@@ -4,9 +4,8 @@
  *}
 
 {varType ContentioSdk\Component\AssetLoader $assets}
-{varType array $pricing}
-{varType array $members}
-{varType array $abilities}
+{varType Strategio\Model\PricingDataset $pricing}
+{varType Strategio\Model\HomepageDataset $homepage}
 
 <div class="bg-blue-dark py-3">&nbsp;</div>
 <div class="position-relative bg-blue text-white pt-5 pt-xl-7 pt-xxl-10" id="tym">
@@ -21,7 +20,7 @@
         <div class="row justify-content-center">
             <div class="col-md-9 col-lg-7 mb-4 opacity-50">
                 <div class="text-center">
-                    {foreach $abilities as $ability}
+                    {foreach $homepage->getAbilities() as $ability}
                         <span class="badge {$ability['bg']}">{$ability['name']}</span>
                     {/foreach}
                 </div>
@@ -31,7 +30,7 @@
 
     <div class="container position-relative" style="z-index: 1">
         <div class="row justify-content-center align-items-end" style="margin-bottom: -3%">
-            <div class="col-6 col-sm-3 text-center mt-5" n:foreach="$members as $member">
+            <div class="col-6 col-sm-3 text-center mt-5" n:foreach="$homepage->getMembers() as $member">
                 <div class="mb-4">
                     <div class="fw-bold">{$member['name']}</div>
                     <div class="small">{$member['position']}</div>
@@ -45,7 +44,7 @@
 <div class="pt-5 bg-light text-blue position-relative">
     <div class="container text-center">
         <div class="h5 mb-0 mt-lg-3">
-            Hodinová sazba jednoho vývojáře:&nbsp;<strong class="fw-bold text-warning">{$pricing['value']|number: 0, ',', '.'}&nbsp;{$pricing['currency']}</strong>
+            Hodinová sazba jednoho vývojáře:&nbsp;<strong class="fw-bold text-warning">{$pricing->get('value')|number: 0, ',', '.'}&nbsp;{$pricing->get('currency')}</strong>
         </div>
     </div>
 </div>

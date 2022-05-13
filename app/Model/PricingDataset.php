@@ -7,17 +7,19 @@ declare(strict_types=1);
 
 namespace Strategio\Model;
 
-class ContactDataset
+class PricingDataset
 {
     /**
      * @param string $key
-     * @return string
+     * @return string|int
      */
-    public function get(string $key): string
+    public function get(string $key): string|int
     {
         $data = [
-            'email' => 'get@strategio.digital',
-            'phone' => '+420 606 091 125'
+            'currency' => 'CZK',
+            'value' => 1200,
+            'discountValue' => 900,
+            'discountPercentage' => 25,
         ];
         
         return $data[$key];

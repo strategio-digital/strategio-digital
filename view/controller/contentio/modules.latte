@@ -4,7 +4,7 @@
  *}
 
 {varType Strategio\Controller\ContentioController $controller}
-{varType array $modules}
+{varType Strategio\Model\ContentioDataset $contentio}
 
 {define summary array $completion}
     <div>
@@ -30,14 +30,14 @@
         <div class="d-flex justify-content-between align-items-center">
             <h2 class="fw-bold display-5 mb-0">Moduly a funkce</h2>
             {if $controller->request->get('summary')}
-                {include summary completion:$controller->getModulesCompletion()}
+                {include summary completion:$contentio->getModulesCompletion()}
             {/if}
         </div>
 
-        {foreach $modules as $moduleName => $module}
+        {foreach $contentio->getModules() as $moduleName => $module}
             <div class="d-flex justify-content-between align-items-center pt-5 pt-sm-7">
                 <h3 class="fw-bold h2 mb-0" id="{$module['name']|webalize}">{$module['name']}</h3>
-                {include summary completion:$controller->getFeaturesCompletion($moduleName)}
+                {include summary completion:$contentio->getFeaturesCompletion($moduleName)}
             </div>
             <div class="row">
                 {foreach $module['features'] as $feature}

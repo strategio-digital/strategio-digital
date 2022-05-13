@@ -3,14 +3,14 @@
  * @author Jiří Zapletal (https://strategio.digital, jz@strategio.digital)
  *}
 
-{varType array $packages}
-{varType array $pricing}
+{varType Strategio\Model\ContentioDataset $contentio}
+{varType Strategio\Model\PricingDataset $pricing}
 
 <div class="container py-5 py-lg-8">
     <h2 class="text-white display-5 fw-bold text-sm-center">Cenové balíčky na&nbsp;míru</h2>
 
     <div class="row">
-        {foreach $packages as $package}
+        {foreach $contentio->getPackages() as $package}
             <div class="col-md-6 col-xl-3 mt-4">
                 <div class="p-4 bg-white rounded-3 shadow h-100 d-flex flex-column justify-content-between">
                     <div>
@@ -82,8 +82,8 @@
     <div class="mt-5 text-white text-sm-center">
         <p>Při roční platbě <strong>20% sleva</strong> na balíček (při přechodu na vyšší balíček se doplácí pouze rozdíl ceny).</p>
         <p>
-            Hodinová sazba za vývojářské úpravy: {$pricing['value']|number: 0, '', '.'} {$pricing['currency']}. Při ročním tarifu
-            <strong>{$pricing['discountPercentage']}% sleva tj. {$pricing['discountValue']} {$pricing['currency']}</strong>.
+            Hodinová sazba za vývojářské úpravy: {$pricing->get('value')|number: 0, '', '.'} {$pricing->get('currency')}. Při ročním tarifu
+            <strong>{$pricing->get('discountPercentage')}% sleva tj. {$pricing->get('discountValue')} {$pricing->get('currency')}</strong>.
         </p>
     </div>
 </div>

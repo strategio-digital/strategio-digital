@@ -4,8 +4,7 @@
  *}
 
 {varType ContentioSdk\Component\AssetLoader $assets}
-{varType array $reviews}
-{varType array $clients}
+{varType Strategio\Model\HomepageDataset $homepage}
 
 <div class="bg-blue-dark py-3">&nbsp;</div>
 <div class="container text-center py-5 py-xl-7 py-xxl-10" id="reference">
@@ -22,7 +21,7 @@
         </div>
         <div class="testimonial-container">
             <div id="testimonials" class="shadow-lg">
-                {foreach $reviews as $review}
+                {foreach $homepage->getReviews() as $review}
                     <div class="bg-white testimonial">
                         <div class="row">
                             <div class="col-lg-6 col-xl-5 pe-lg-0 position-relative text-center d-none d-lg-block">
@@ -63,7 +62,7 @@
     </div>
 
     <div class="mt-5 text-center testimonial-nav-items" id="testimonial-nav-items">
-        {foreach $reviews as $review}
+        {foreach $homepage->getReviews() as $review}
             <span class="d-inline-block rounded-circle mx-1">&nbsp;</span>
         {/foreach}
     </div>
@@ -71,7 +70,7 @@
     <div class="text-white mt-7">
         <h2 class="fw-bold mb-5 display-6">Důvěřují nám nejrůznější firmy&nbsp;a&nbsp;instituce</h2>
         <div class="row opacity-50 justify-content-center">
-            <div class="col-6 col-sm-4 col-lg-3 col-xl-2 px-3 text-center" n:foreach="$clients as $client">
+            <div class="col-6 col-sm-4 col-lg-3 col-xl-2 px-3 text-center" n:foreach="$homepage->getClients() as $client">
                 <img src="{$assets->get($client['img'])}" alt="{$client['name']}">
             </div>
         </div>

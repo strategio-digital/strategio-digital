@@ -1,5 +1,5 @@
-# Rokuc.cz
-Frontend for contentio.app REST API
+# Strategio.digital
+Frontend for [strategio.digital](https://strategio.digital) website based on Contentio-SDK
 
 ## Installation guide
 1. `cp .env.example .env`

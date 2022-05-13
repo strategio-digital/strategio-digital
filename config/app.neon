@@ -1,2 +1,7 @@
 services:
     routerFactory: Strategio\Router\RouterFactory
+
+    - Strategio\Model\ContactDataset
+    - Strategio\Model\PricingDataset
+    - Strategio\Model\ContentioDataset
+    - Strategio\Model\HomepageDataset
