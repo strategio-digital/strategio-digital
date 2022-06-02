@@ -3,8 +3,9 @@
  * @author Jiří Zapletal (https://strategio.digital, jz@strategio.digital)
  *}
 
+{varType ContentioSdk\Controller\ErrorController $controller}
 {varType array $_ENV}
-{varType string $error}
+{varType array $error}
 
 {extends './../@layout.latte'}
 
@@ -19,17 +20,17 @@
     <div class="d-flex w-100 h-100 justify-content-center align-items-center bg-dark">
         <div class="container position-relative text-white">
             <h1 class="display-3 font-weight-bolder mb-0 mt-5">
-                404
+                {$error['code']}
             </h1>
             <p class="h3 mt-4">
                 Omlouváme se, ale tato pod-stránka webu již
                 <br class="d-none d-md-block"> nejspíše neexistuje. Vraťe se zpět na úvod.
             </p>
             {if $_ENV['APP_ENV_MODE'] === 'develop'}
-                <p class="small mt-3 text-white-50" n:ifset="$error">{$error}</p>
+                <p class="small mt-3 text-white-50" n:ifset="$error['message']">{$error['message']}</p>
             {/if}
             <div class="d-md-inline-flex mt-4">
-                <a href="/" class="btn btn-outline-light">
+                <a href="{$controller->link('home')}" class="btn btn-outline-light">
                     Zpět na úvod
                 </a>
             </div>
