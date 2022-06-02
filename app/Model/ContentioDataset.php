@@ -13,8 +13,8 @@ class ContentioDataset
     {
         return [
             'Neomezené možnosti při tvorbě šablony a designu.',
-            'Neomezený počet produktů v e-shopu.',
             'Pokročílá správa článků a dalšího obsahu.',
+            'Neomezený počet produktů v e-shopu.',
             'Žádné předplatné modulů ani dokupování nově vyvinutých.',
             '<span class="fw-bold">Plnohodnotná automatizace</span> díky úpravám na zakázku.',
             '<span class="fw-bold">REST API</span> pro snadné napojení ostatních systémů.',
@@ -252,6 +252,20 @@ class ContentioDataset
                     ['status' => Feature::TODO, 'name' => 'Exporty pro přepravní společnosti'],
                 ]
             ],
+            'invoices' => [
+                'name' => 'Fakturace',
+                'features' => [
+                    ['status' => Feature::TODO, 'name' => 'Vytvoření kontaktu a načtení z Aresu'],
+                    ['status' => Feature::TODO, 'name' => 'Vytvoření faktury'],
+                    ['status' => Feature::TODO, 'name' => 'Vytvoření proformy'],
+                    ['status' => Feature::TODO, 'name' => 'Pravidelné proformy / faktury'],
+                    ['status' => Feature::TODO, 'name' => 'Automatické párování úhrad'],
+                    ['status' => Feature::TODO, 'name' => 'Propojení s FIO bankou'],
+                    ['status' => Feature::TODO, 'name' => 'Automatické úpomínky na splatnost'],
+                    ['status' => Feature::TODO, 'name' => 'Přehled nákladů a multiupload'],
+                    ['status' => Feature::TODO, 'name' => 'Automatické odesílání nákladů na e-mail účetní'],
+                ]
+            ],
             'product' => [
                 'name' => 'Produkty',
                 'features' => [
@@ -400,7 +414,6 @@ class ContentioDataset
                     ['status' => Feature::DONE, 'name' => 'API debugbar (JSON)'],
                     ['status' => Feature::DONE, 'name' => 'Zpracovávání obrázků'],
                     ['status' => Feature::TODO, 'name' => 'Nativní typy (Doctrine)'],
-                    ['status' => Feature::TODO, 'name' => 'Ukázka košíku ve VanillaJS'],
                     ['status' => Feature::TODO, 'name' => 'Sitemap generátor'],
                     ['status' => Feature::TODO, 'name' => 'Robots.txt generátor'],
                     ['status' => Feature::TODO, 'name' => 'Výrobci / Značky produktů'],
@@ -408,7 +421,6 @@ class ContentioDataset
                     ['status' => Feature::TODO, 'name' => 'Vylepšení zpracovávání queues'],
                     ['status' => Feature::TODO, 'name' => 'Vyhledávač'],
                     ['status' => Feature::TODO, 'name' => 'Editovatelné překlady'],
-                    ['status' => Feature::TODO, 'name' => 'Výukové materiály pro VŠ'],
                 ]
             ],
         ];
