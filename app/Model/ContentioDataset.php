@@ -310,7 +310,7 @@ class ContentioDataset
                     ['status' => Feature::TODO, 'name' => 'Diskuze k produktům'],
                 ]
             ],
-            'user' => [
+            'customer' => [
                 'name' => 'Zákazníci',
                 'features' => [
                     ['status' => Feature::DONE, 'name' => 'Přehled zákazníků'],
@@ -321,9 +321,17 @@ class ContentioDataset
                     ['status' => Feature::DONE, 'name' => 'Správa zákaznických skupin'],
                     ['status' => Feature::DONE, 'name' => 'Reset hesla zákazníka'],
                     ['status' => Feature::DONE, 'name' => 'Změna skupiny zákazníka'],
-                    ['status' => Feature::TODO, 'name' => 'Rozdělení na Admin/Customer'],
                     ['status' => Feature::TODO, 'name' => 'Objednávky dle zákazníka'],
                     ['status' => Feature::TODO, 'name' => 'Výpočet CLV'],
+                ]
+            ],
+            'admin' => [
+                'name' => 'Administrátoři',
+                'features' => [
+                    ['status' => Feature::DONE, 'name' => 'Přehled administrátorů'],
+                    ['status' => Feature::DONE, 'name' => 'Filtrace administrátorů'],
+                    ['status' => Feature::DONE, 'name' => 'Správa administrátorů'],
+                    ['status' => Feature::DONE, 'name' => 'Reset a změna hesla'],
                 ]
             ],
             'article' => [
