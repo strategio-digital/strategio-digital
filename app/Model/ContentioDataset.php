@@ -18,16 +18,16 @@ class ContentioDataset
     
             'Nejlevnější a nejrychlejší způsob zakázkové realizace webu i e-shopu na celém trhu.',
     
-            'Neomezené úložitě dat a jejich neomezený přenos.',
+            'Neomezené úložiště dat a jejich neomezený přenos.',
     
             'Doména na 1. rok ZDARMA.',
             'Platební brána GoPay ZDARMA.',
     
             'Žádné předplatné modulů ani dokupování nově vyvinutých.',
-            'Žádné omezení ani limity administačního rozhraní.',
+            'Žádné omezení ani limity administračního rozhraní.',
     
             'Neomezený počet produktů v e-shopu.',
-            'Pokročílá správa článků a dalšího obsahu.',
+            'Pokročilá správa článků a dalšího obsahu.',
         ];
     }
     
@@ -105,7 +105,7 @@ class ContentioDataset
                 'name' => 'Starter',
                 'price' => 499,
                 'items' => [
-                    ['name' => 'Vl. doména 1. rok ZDARMA'],
+                    ['name' => 'Doména 1. rok ZDARMA'],
                     ['name' => '1 e-mailová adresa (1GB)'],
                     ['name' => 'Všechny moduly a funkce'],
                     ['name' => '10GB úložiště dat'],
@@ -120,7 +120,7 @@ class ContentioDataset
                 'price' => 749,
                 'items' => [],
                 'more_items' => [
-                    ['name' => 'Vl. doména 1. rok ZDARMA'],
+                    ['name' => 'Doména 1. rok ZDARMA'],
                     ['name' => '5 e-mailových adres (5GB)'],
                     ['name' => 'Všechny moduly a funkce'],
                     ['name' => 'Neomezené úložiště dat'],
@@ -137,7 +137,7 @@ class ContentioDataset
                 'price' => 1599,
                 'items' => [],
                 'more_items' => [
-                    ['name' => 'Vl. doména 1. rok ZDARMA'],
+                    ['name' => 'Doména 1. rok ZDARMA'],
                     ['name' => '20 e-mailových adres (20GB)'],
                     ['name' => 'Všechny moduly a funkce'],
                     ['name' => 'Neomezené úložiště dat'],
@@ -148,14 +148,14 @@ class ContentioDataset
                     ['name' => 'Denní konzultace na Meetu'],
                     ['name' => 'Sleva 30 % na hod. sazbu'],
                 ],
-                'audience' => 'Nejvhodnější řešení pro zaběhnuté podnikatele, kteří nemají čas a vyžadují VIP péči o web, e-shop a správů mailů.'
+                'audience' => 'Nejvhodnější řešení pro zaběhnuté podnikatele, kteří nemají čas a vyžadují VIP péči o web, e-shop a správu mailů.'
             ],
             'standard' => [
                 'name' => 'Enterprise',
                 'price' => 0,
                 'items' => [],
                 'more_items' => [
-                    ['name' => 'Neomezeně domén'],
+                    ['name' => 'Doména 1. rok ZDARMA'],
                     ['name' => 'Neomezeně e-mailů'],
                     ['name' => 'Všechny moduly a funkce'],
                     ['name' => 'Neomezené úložiště dat'],
