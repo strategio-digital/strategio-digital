@@ -13,7 +13,7 @@
                 <ul class="list-unstyled mt-4 mb-0">
                     {var $pointList = array_merge($contentio->getPointList()['core'], $contentio->getPointList()['more'])}
                     {foreach $pointList as $point}
-                        <li class="{if $iterator->getCounter() % 8 === 0}mb-4{elseif !$iterator->isLast()}mb-2{/if} d-flex">
+                        <li class="{if $iterator->getCounter() === 11}mb-4{elseif !$iterator->isLast()}mb-2{/if} d-flex">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="me-2 text-success" viewBox="0 0 16 16">
                                     <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
@@ -30,7 +30,7 @@
                         Vyzkoušet<span class="d-none d-md-inline"> ZDARMA</span>
                     </a>
                     <button class="btn btn-xl btn-cta mt-3" data-bs-toggle="modal" data-bs-target="#contact-modal">
-                        Konzultovat<span class="d-none d-md-inline"> řešení</span>
+                        Poptat<span class="d-none d-md-inline"> řešení</span>
                     </button>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                                         Ukázka administrace
                                     </a>
                                 </li>
-                                <li class="mt-2">
+                                <li class="mt-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart me-3 text-dark" viewBox="0 0 16 16">
                                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                                     </svg>
@@ -84,8 +84,8 @@
                             <ol class="list-unstyled mb-0">
                                 <li class="mt-3">
                                     <a href="//documenter.getpostman.com/view/14885541/UVC8B5B4" target="_blank">REST API</a>
+                                    <div class="small text-black-50 mt-1">Přehled všech API end-pointů, které můžete využít pro automatizovanou práci s daty v Contentiu.</div>
                                 </li>
-                                <div class="small text-black-50 mt-1">Přehled všech API end-pointů, které můžete využít pro automatizovanou práci s daty v Contentio CRM.</div>
 
                                 <li class="mt-3">
                                     <a href="//github.com/strategio-digital/contentio-sdk" target="_blank">
@@ -97,7 +97,7 @@
                                     <a href="//github.com/strategio-digital/rokuc-cz" target="_blank">
                                         Ukázkový kód Rokuč.cz
                                     </a>
-                                    <div class="small text-black-50 mt-1">Kód webu postaveného na Contentio SDK.</div>
+                                    <div class="small text-black-50 mt-1">Demonstrace reálného projektu pro vývojáře, kteří chtějí stavět world-class weby s bleskovou rychlostí.</div>
                                 </li>
                             </ol>
                         </div>

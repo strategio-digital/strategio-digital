@@ -74,9 +74,9 @@ import {SetupOptions} from "../../vendor/strategio/contentio-sdk/assets/typescri
         {
             name: 'contact',
             rules: [
-                {type: 'required', message: 'Kontakt je povinný.'},
-                {type: 'min', message: 'Kontakt musí obsahovat alespoň 3 znaky.', param: {min: 3}},
-                {type: 'max', message: 'Kontakt může obsahovat maximálně 100 znaků', param: {max: 100}},
+                {type: 'max', message: 'Telefon / e-mail může obsahovat maximálně 100 znaků', param: {max: 100}},
+                {type: 'min', message: 'Telefon / e-mail musí obsahovat alespoň 9 znaků.', param: {min: 9}},
+                {type: 'required', message: 'Telefon / email je povinný.'},
             ],
         }
     ]);

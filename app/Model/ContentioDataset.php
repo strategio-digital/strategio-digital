@@ -12,15 +12,36 @@ class ContentioDataset
     public function getCorePointList(): array
     {
         return [
-            'Neomezené možnosti při tvorbě šablony a designu.',
-            'Pokročílá správa článků a dalšího obsahu.',
-            'Neomezený počet produktů v e-shopu.',
+            'Nulová počáteční investice za realizaci webu i e-shopu.',
+            'Spuštění nového projektu (bez grafických úprav) během pár minut od poptávky.',
+            '<strong>Za grafické úpravy zaplatíte až tehdy, když Vám projekt začne reálně vydělávat.</strong>',
+    
+            'Nejlevnější a nejrychlejší způsob zakázkové realizace webu i e-shopu na celém trhu.',
+    
+            'Neomezené úložitě dat a jejich neomezený přenos.',
+    
+            'Doména na 1. rok ZDARMA.',
+            'Platební brána GoPay ZDARMA.',
+    
             'Žádné předplatné modulů ani dokupování nově vyvinutých.',
-            '<span class="fw-bold">Plnohodnotná automatizace</span> díky úpravám na zakázku.',
-            '<span class="fw-bold">REST API</span> pro snadné napojení ostatních systémů.',
-            'Cloudové řešení, které odbaví miliony požadavků.',
-            'Moderní systém vycházející z dlouholetých zkušeností.',
-            '<span class="fw-bold">Vývojářský tým připravený splnit všechna Vaše očekávání.</span>',
+            'Žádné omezení ani limity administačního rozhraní.',
+    
+            'Neomezený počet produktů v e-shopu.',
+            'Pokročílá správa článků a dalšího obsahu.',
+        ];
+    }
+    
+    /**
+     * @return array<string, mixed>
+     */
+    public function getPointList(): array
+    {
+        return [
+            'core' => $this->getCorePointList(),
+            'more' => [
+                '<span class="fw-bold">Naprostá volnost v úpravách na míru.</span>',
+                '<span class="fw-bold">Revoluční konkurenční výhoda v oblasti webů a e-shopových řešení.</span>',
+            ]
         ];
     }
     
@@ -81,72 +102,71 @@ class ContentioDataset
     {
         return [
             'in_house' => [
-                'name' => 'InHouse',
-                'price' => 0,
+                'name' => 'Starter',
+                'price' => 499,
                 'items' => [
-                    ['name' => 'Všechny funkce systému'],
-                    ['name' => 'Zdrojový kód zdarma'],
-                    ['name' => 'Hosting na vlastním serveru'],
-                    ['name' => 'Úpravy si zajišťujete sami'],
-                    ['name' => 'Nové funkce o 3 měsíce později'],
-                    ['name' => 'Aktualizace si zajišťujete sami'],
+                    ['name' => 'Vl. doména 1. rok ZDARMA'],
+                    ['name' => '1 e-mailová adresa (1GB)'],
+                    ['name' => 'Všechny moduly a funkce'],
+                    ['name' => '10GB úložiště dat'],
+                    ['name' => 'Neomezený přenos dat'],
+                    ['name' => 'Bez možnosti grafických úprav'],
                 ],
                 'more_items' => [],
-                'audience' => 'Vhodný pro všechny, kteří mají vlastní vývojářský tým / agenturu.'
+                'audience' => 'Nejlevnější webové řešení pro ty, kteří se spokojí s připravenou šablonou a nepotřebují se odlišit pomocí grafické úpravy na míru.'
             ],
             'web' => [
-                'name' => 'Web',
-                'price' => 750,
-                'items' => [
-                    ['name' => 'Všechny funkce systému'],
-                    ['name' => 'Zdrojový kód zdarma'],
-                ],
+                'name' => 'Standard',
+                'price' => 749,
+                'items' => [],
                 'more_items' => [
-                    ['name' => 'Hosting v cloudu'],
-                    ['name' => 'Úpravy na míru od Strategio'],
-                    ['name' => 'Nové funkce dostupné ihned'],
-                    ['name' => 'Nepřetržité aktualizace'],
-                    ['name' => '<strong>12 týdnů na zpracování issues</strong>'],
-                    ['name' => 'Tel. podpora 9:00 až 18:00'],
-                    ['name' => 'Vlastní Slack kanál'],
+                    ['name' => 'Vl. doména 1. rok ZDARMA'],
+                    ['name' => '5 e-mailových adres (5GB)'],
+                    ['name' => 'Všechny moduly a funkce'],
+                    ['name' => 'Neomezené úložiště dat'],
+                    ['name' => 'Neomezený přenos dat'],
+                    ['name' => '<strong>30h grafických úprav na SEKERU*</strong>'],
+                    ['name' => '<strong>Platební brána ZDARMA</strong>'],
+                    ['name' => 'Tel. podpora 9:00 až 20:00'],
+                    ['name' => 'Denní konzultace na Meetu'],
                 ],
-                'audience' => 'Vhodný pro klienty, kteří potřebují kvalitní web s administrací.'
+                'audience' => '* Na sekeru: Nejlevnější webové řešení na trhu s možností grafických úprav na míru splatných až tehdy, když Vám projekt začne reálně vydělávat!'
             ],
             'starter' => [
-                'name' => 'E-shop',
-                'price' => 2900,
-                'items' => [
-                    ['name' => 'Všechny funkce systému'],
-                    ['name' => 'Zdrojový kód zdarma'],
-                ],
+                'name' => 'Business plus',
+                'price' => 1599,
+                'items' => [],
                 'more_items' => [
-                    ['name' => 'Hosting v cloudu'],
-                    ['name' => 'Úpravy na míru od Strategio'],
-                    ['name' => 'Nové funkce dostupné ihned'],
-                    ['name' => 'Nepřetržité aktualizace'],
-                    ['name' => '<strong>8 týdnů na zpracování issues</strong>'],
-                    ['name' => 'Tel. podpora 9:00 až 18:00'],
-                    ['name' => 'Vlastní Slack kanál'],
+                    ['name' => 'Vl. doména 1. rok ZDARMA'],
+                    ['name' => '20 e-mailových adres (20GB)'],
+                    ['name' => 'Všechny moduly a funkce'],
+                    ['name' => 'Neomezené úložiště dat'],
+                    ['name' => 'Neomezený přenos dat'],
+                    ['name' => '<strong>30h grafických úprav ZDARMA</strong>'],
+                    ['name' => 'Platební brána ZDARMA'],
+                    ['name' => 'Tel. podpora 9:00 až 20:00'],
+                    ['name' => 'Denní konzultace na Meetu'],
+                    ['name' => 'Sleva 30 % na hod. sazbu'],
                 ],
-                'audience' => 'Vhodný pro e-shopaře, kteří začínají automatizovat procesy.'
+                'audience' => 'Nejvhodnější řešení pro zaběhnuté podnikatele, kteří nemají čas a vyžadují VIP péči o web, e-shop a správů mailů.'
             ],
             'standard' => [
-                'name' => 'Premium',
-                'price' => 7400,
-                'items' => [
-                    ['name' => 'Všechny funkce systému'],
-                    ['name' => 'Zdrojový kód zdarma'],
-                ],
+                'name' => 'Enterprise',
+                'price' => 0,
+                'items' => [],
                 'more_items' => [
-                    ['name' => 'Hosting v cloudu'],
-                    ['name' => 'Úpravy na míru od Strategio'],
-                    ['name' => 'Nové funkce dostupné ihned'],
-                    ['name' => 'Nepřetržité aktualizace'],
-                    ['name' => '<strong>Přednostní zpracování issues</strong>'],
-                    ['name' => 'Tel. podpora 9:00 až 18:00'],
-                    ['name' => 'Vlastní Slack kanál'],
+                    ['name' => 'Neomezeně domén'],
+                    ['name' => 'Neomezeně e-mailů'],
+                    ['name' => 'Všechny moduly a funkce'],
+                    ['name' => 'Neomezené úložiště dat'],
+                    ['name' => 'Neomezený přenos dat'],
+                    ['name' => '30h grafických úprav ZDARMA'],
+                    ['name' => 'Platební brána ZDARMA'],
+                    ['name' => 'Tel. podpora 9:00 až 20:00'],
+                    ['name' => 'Denní konzultace na Meetu'],
+                    ['name' => 'Sleva 30 % na hod. sazbu'],
                 ],
-                'audience' => 'Vhodný pro e-shopaře, kteří chtějí plnohodnotnou automatizaci.'
+                'audience' => 'Vhodný pro velmi náročné podnikatele, kteří potřebují vývoj modulů na míru, grafické úpravy, UX nebo marketing.'
             ]
         ];
     }
@@ -165,8 +185,10 @@ class ContentioDataset
                     ['status' => Feature::DONE, 'name' => 'Zákaznické skupiny'],
                     ['status' => Feature::DONE, 'name' => 'Ceny dle zákaznických skupin'],
                     ['status' => Feature::DONE, 'name' => 'Přehled produktů'],
+                    ['status' => Feature::DONE, 'name' => 'Filtrace produktů dle kategorií'],
                     ['status' => Feature::DONE, 'name' => 'Detail produktu'],
                     ['status' => Feature::DONE, 'name' => 'Seznam článků'],
+                    ['status' => Feature::DONE, 'name' => 'Filtrace článků dle štítků'],
                     ['status' => Feature::DONE, 'name' => 'Detail článku'],
                     ['status' => Feature::DONE, 'name' => 'Metody plateb'],
                     ['status' => Feature::DONE, 'name' => 'Metody dopravy'],
@@ -294,9 +316,9 @@ class ContentioDataset
                     ['status' => Feature::DONE, 'name' => 'Nastavení pro sociální sítě'],
                     ['status' => Feature::DONE, 'name' => 'Váha a rozměry'],
                     ['status' => Feature::DONE, 'name' => 'Atypické zboží'],
+                    ['status' => Feature::DONE, 'name' => 'Kategorie produktů'],
                     ['status' => Feature::IN_PROGRESS, 'name' => 'Ukládání cen s DPH'],
                     ['status' => Feature::TODO, 'name' => 'Parametry produktů (kategorické)'],
-                    ['status' => Feature::TODO, 'name' => 'Kategorie produktů'],
                     ['status' => Feature::TODO, 'name' => 'Autocomplete input'],
                     ['status' => Feature::TODO, 'name' => 'Varianty produktů'],
                     ['status' => Feature::TODO, 'name' => 'Související zboží'],
@@ -308,6 +330,16 @@ class ContentioDataset
                     ['status' => Feature::TODO, 'name' => 'Inline editace cen'],
                     ['status' => Feature::TODO, 'name' => 'Hodnocení produktů'],
                     ['status' => Feature::TODO, 'name' => 'Diskuze k produktům'],
+                ]
+            ],
+            'categories' => [
+                'name' => 'Kategorie',
+                'features' => [
+                    ['status' => Feature::DONE, 'name' => 'Přehled kategorií'],
+                    ['status' => Feature::DONE, 'name' => 'Filtrace kategorií'],
+                    ['status' => Feature::DONE, 'name' => 'Správa kategorií'],
+                    ['status' => Feature::DONE, 'name' => 'Řazení kategorií'],
+                    ['status' => Feature::DONE, 'name' => 'Přesuny kategorií'],
                 ]
             ],
             'customer' => [
@@ -431,22 +463,6 @@ class ContentioDataset
                     ['status' => Feature::TODO, 'name' => 'Editovatelné překlady'],
                 ]
             ],
-        ];
-    }
-    
-    /**
-     * @return array<string, mixed>
-     */
-    public function getPointList(): array
-    {
-        return [
-            'core' => $this->getCorePointList(),
-            'more' => [
-                '<span class="fw-bold">Naprostá volnost v úpravách na míru.</span>',
-                'Možnost podílet se na tvorbě roadmapy a ušetřit 50 % za vývoj.',
-                'Budou Vám k dispozici autoři / programátoři systému.',
-                '<span class="fw-bold">ZDARMA</span> dostanete hotové řešení v hodnotě stovek tisíc Kč.',
-            ]
         ];
     }
 }
