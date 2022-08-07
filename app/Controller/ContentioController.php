@@ -16,5 +16,6 @@ class ContentioController extends BaseController
     public function index(): void
     {
         $this->template->contentio = $this->contentioDataset;
+        $this->redirect('https://contentio.app', 301);
     }
 }
