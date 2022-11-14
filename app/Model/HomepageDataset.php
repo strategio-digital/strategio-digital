@@ -81,13 +81,13 @@ class HomepageDataset
                 'photo' => '/img/member-photo-jz.png'
             ],
             [
-                'name' => 'Anna Tůmová',
-                'position' => 'Backend developer',
+                'name' => 'Lucie Jeroušková',
+                'position' => 'UX & UI designer',
                 'photo' => '/img/member-photo-jz.png'
             ],
             [
                 'name' => '+ externisté',
-                'position' => 'UX, Design, Marketing',
+                'position' => 'DEV, OPS, Marketing',
                 'photo' => '/img/member-photo-jz.png'
             ],
         ];
@@ -120,8 +120,8 @@ class HomepageDataset
             //['name' => 'SCSS', 'bg' => 'bg-primary'],
             ['name' => 'Bootstrap 5', 'bg' => 'bg-primary'],
             ['name' => 'Tailwind', 'bg' => 'bg-primary'],
-            ['name' => 'Google Cloud Platform', 'bg' => 'bg-primary'],
-            //['name' => 'Amazon Web Services', 'bg' => 'bg-primary']
+            ['name' => 'AWS', 'bg' => 'bg-primary'],
+            ['name' => 'GCP', 'bg' => 'bg-primary'],
             ['name' => 'Docker', 'bg' => 'bg-primary'],
         ];
     }
