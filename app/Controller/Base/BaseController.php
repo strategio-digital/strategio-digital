@@ -40,6 +40,11 @@ abstract class BaseController extends \ContentioSdk\Controller\Base\BaseControll
     
     public function startup(): void
     {
+        if ($this->request->getHost() === 'strategio.digital') {
+            $this->response->headers->set('Location', 'https://strategio.dev' . $this->request->getPathInfo());
+            $this->sendResponse();
+        }
+        
         parent::startup();
         
         $this->template->contacts = $this->contactDataset;
