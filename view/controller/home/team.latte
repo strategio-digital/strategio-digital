@@ -13,7 +13,7 @@
         <div class="text-center mb-6">
             <h2 class="display-3 fw-bold">Váš nový tým</h2>
             <p class="h3 mb-0">
-                Dle potřeb si zvolíte jednotlivé vývojáře a sestavíte tým.
+                Dle potřeb Vám zvolíme jednotlivé vývojáře a sestavíme tým.
             </p>
         </div>
 
@@ -37,14 +37,6 @@
                 </div>
                 <img src="{$assets->get($member['photo'])}" alt="{$member['name']}" class="img-fluid">
             </div>
-        </div>
-    </div>
-</div>
-
-<div class="pt-5 bg-light text-blue position-relative">
-    <div class="container text-center">
-        <div class="h5 mb-0 mt-lg-3">
-            Hodinová sazba jednoho vývojáře:&nbsp;<strong class="fw-bold text-warning">{$pricing->get('value')|number: 0, ',', '.'}&nbsp;{$pricing->get('currency')}</strong>
         </div>
     </div>
 </div>
