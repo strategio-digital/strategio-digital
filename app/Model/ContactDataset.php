@@ -16,7 +16,7 @@ class ContactDataset
     public function get(string $key): string
     {
         $data = [
-            'email' => 'get@strategio.digital',
+            'email' => 'get@strategio.dev',
             'phone' => '+420 606 091 125'
         ];
         
