@@ -71,17 +71,17 @@ class HomepageDataset
     {
         return [
             [
-                'name' => 'Jiří Zapletal',
+                'name' => 'Jiří Zapletal,&nbsp;CEO',
                 'position' => 'Lead backend developer',
                 'photo' => '/img/member-photo-jz.png'
             ],
             [
-                'name' => 'David Kolář',
+                'name' => 'Bc. David Kolář',
                 'position' => 'Lead frontend developer',
                 'photo' => '/img/member-photo-jz.png'
             ],
             [
-                'name' => 'Lucie Jeroušková',
+                'name' => 'Ing. Lucie Jeroušková',
                 'position' => 'UX & UI designer',
                 'photo' => '/img/member-photo-jz.png'
             ],
@@ -100,29 +100,33 @@ class HomepageDataset
     {
         return [
             ['name' => 'PHP', 'bg' => 'bg-primary'],
-            ['name' => 'Nette', 'bg' => 'bg-primary'],
-            ['name' => 'Symfony', 'bg' => 'bg-primary'],
             //['name' => 'Laravel', 'bg' => 'bg-primary'],
             ['name' => 'Doctrine ORM', 'bg' => 'bg-primary'],
             ['name' => 'PHP Stan', 'bg' => 'bg-primary'],
+            ['name' => 'Nette packages', 'bg' => 'bg-primary'],
+            ['name' => 'Symfony components', 'bg' => 'bg-primary'],
+            ['name' => 'Strategio SaaS', 'bg' => 'bg-primary'],
             //['name' => 'NodeJS', 'bg' => 'bg-primary'],
             ['name' => 'Typescript', 'bg' => 'bg-primary'],
             ['name' => 'VanillaJS', 'bg' => 'bg-primary'],
-            ['name' => 'ReactJS', 'bg' => 'bg-primary'],
+            //['name' => 'ReactJS', 'bg' => 'bg-primary'],
             ['name' => 'VueJS', 'bg' => 'bg-primary'],
             ['name' => 'Postgres', 'bg' => 'bg-primary'],
-            ['name' => 'MySQL', 'bg' => 'bg-primary'],
+            //['name' => 'MySQL', 'bg' => 'bg-primary'],
             ['name' => 'MariaDB', 'bg' => 'bg-primary'],
             //['name' => 'Redis', 'bg' => 'bg-primary'],
             //['name' => 'Elastic', 'bg' => 'bg-primary'],
-            ['name' => 'Firestore', 'bg' => 'bg-primary'],
-            ['name' => 'Webpack', 'bg' => 'bg-primary'],
+            //['name' => 'Firestore', 'bg' => 'bg-primary'],
+            //['name' => 'Firestore', 'bg' => 'bg-primary'],
+            //['name' => 'Webpack', 'bg' => 'bg-primary'],
             //['name' => 'SCSS', 'bg' => 'bg-primary'],
-            ['name' => 'Bootstrap 5', 'bg' => 'bg-primary'],
+            ['name' => 'Vite', 'bg' => 'bg-primary'],
+            ['name' => 'Bootstrap', 'bg' => 'bg-primary'],
             ['name' => 'Tailwind', 'bg' => 'bg-primary'],
+            ['name' => 'Docker', 'bg' => 'bg-primary'],
             ['name' => 'AWS', 'bg' => 'bg-primary'],
             ['name' => 'GCP', 'bg' => 'bg-primary'],
-            ['name' => 'Docker', 'bg' => 'bg-primary'],
+            ['name' => 'Digital Ocean', 'bg' => 'bg-primary'],
         ];
     }
 }
