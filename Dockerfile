@@ -1,5 +1,10 @@
 FROM wyveo/nginx-php-fpm:php81
 
+# Remove the old key and add the updated GPG key for Sury PHP repository
+RUN apt-key del 95BD4743
+RUN wget -q -O - https://packages.sury.org/php/apt.gpg | apt-key add -
+RUN wget -q -O - https://nginx.org/keys/nginx_signing.key | apt-key add -
+
 WORKDIR /usr/share/nginx/html
 EXPOSE 80
 
@@ -22,8 +27,8 @@ RUN apt-get update && apt-get install -y \
     gnupg
 
 # NodeJS
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
-    && apt-get install -y nodejs && npm i npm -g
+RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get update && apt-get install -y nodejs
 
 # Yarn
 RUN corepack enable
