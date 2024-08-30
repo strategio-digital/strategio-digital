@@ -105,7 +105,7 @@ class HomepageDataset
             ['name' => 'PHP Stan', 'bg' => 'bg-primary'],
             ['name' => 'Nette packages', 'bg' => 'bg-primary'],
             ['name' => 'Symfony components', 'bg' => 'bg-primary'],
-            ['name' => 'Strategio SaaS', 'bg' => 'bg-primary'],
+            ['name' => 'Megio panel', 'bg' => 'bg-primary'],
             //['name' => 'NodeJS', 'bg' => 'bg-primary'],
             ['name' => 'Typescript', 'bg' => 'bg-primary'],
             ['name' => 'VanillaJS', 'bg' => 'bg-primary'],
